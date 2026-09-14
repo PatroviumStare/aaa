@@ -1,0 +1,50 @@
+<!DOCTYPE html> 
+<html lang="ru"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Лабораторная работа: jQuery</title> 
+<link rel="stylesheet" href="style.css"> 
+<script src="https://code.jquery.com/jquery-3.7.0.min.js" defer></script>
+<script src="script.js" defer></script> 
+</head> 
+<body> 
+    <header> 
+        <h1>Лабораторная работа: jQuery</h1> 
+    </header> 
+    <main> 
+        <section> 
+            <h2>Динамическая галерея</h2> 
+            <div id="gallery"> 
+                <img id="main-image" src="image1.jpg" alt="Изображение 1"> 
+                <div class="controls"> 
+                    <button id="prev-btn">Предыдущее</button> 
+                    <button id="next-btn">Следующее</button> 
+                </div> 
+                <ul id="image-list"></ul> 
+            </div> 
+        </section> 
+        <section> 
+            <h2>Форма обратной связи</h2> 
+            <form id="feedback-form"> 
+                <label for="name">Имя:</label> 
+                <input type="text" id="name" required> 
+                <label for="email">Email:</label> 
+                <input type="email" id="email" required> 
+                <label for="message">Сообщение:</label> 
+                <textarea id="message" required></textarea> 
+                <button type="submit">Отправить</button> 
+                <p id="message-box" class="hidden"></p> 
+            </form> 
+        </section> 
+        <section> 
+            <h2>Список статей</h2> 
+            <ul id="article-list"></ul> 
+        </section> 
+    </main> 
+    <footer> 
+        <p>Автор: (Ваше имя)</p> 
+    </footer> 
+    <script src="script.js"></script> 
+</body> 
+</html> 

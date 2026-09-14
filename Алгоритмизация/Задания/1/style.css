@@ -1,0 +1,42 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+}
+
+#gallery {
+    width: 400px;
+    margin-bottom: 20px;
+}
+
+#main-image {
+    width: 100%;
+}
+
+.controls {
+    margin-top: 10px;
+}
+
+#feedback-form label, #feedback-form input, #feedback-form textarea {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#message-box {
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #000;
+    background-color: lightgreen;
+}
+
+.hidden {
+    display: none;
+}
+
+#image-list {
+    padding-left: 0px;
+    display: flex;
+    flex-direction: row;    
+    gap: 1pc;
+    list-style-type: none;
+}
+
