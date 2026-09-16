@@ -1,0 +1,18 @@
+filename = 'puffish_skills-0.19.0-1.21-neoforge.jar'
+name = "Pufferfish's Skills [Fabric & Forge & NeoForge]"
+side = 'server'
+x-prismlauncher-dependencies = []
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21', '1.21.1' ]
+x-prismlauncher-release-type = 'beta'
+x-prismlauncher-version-number = 'puffish_skills-0.19.0-1.21-neoforge.jar'
+
+[download]
+hash = 'fa134a526ab2f098559b7d824269ae36aaac32b3'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 8792775
+project-id = 835091

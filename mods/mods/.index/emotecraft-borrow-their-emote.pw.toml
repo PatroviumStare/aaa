@@ -1,0 +1,25 @@
+filename = 'emotecraft-borrow-their-emote-1.0.1+1.21.1+neoforge.jar'
+name = 'Emotecraft: Borrow Their Emote (EBTE)'
+side = ''
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = '[neoforge/1.21.1] Emotecraft: Borrow Their Emote (EBTE) v1.0.1'
+
+[download]
+hash = 'e2cf8d40b01a06ec39e5d5a4674962a1045c5dae'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 8612098
+project-id = 1590584
+
+[[x-prismlauncher-dependencies]]
+addonId = '667299'
+type = 'OPTIONAL'
+
+[[x-prismlauncher-dependencies]]
+addonId = '1399257'
+type = 'REQUIRED'

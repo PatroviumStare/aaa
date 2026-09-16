@@ -1,0 +1,33 @@
+filename = 'irons_spells_dynamic_skilltree_1.1.0.jar'
+name = "Iron's Spells 'n Spellbooks Dynamic Skill Trees"
+side = 'server'
+x-prismlauncher-loaders = [ 'neoforge', 'forge' ]
+x-prismlauncher-mc-versions = [ '1.19.2', '1.20.1', '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = 'irons_spells_dynamic_skilltree_1.1.0'
+
+[download]
+hash = 'de961262e4328fea6861f6ba94323037df2d44ab'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 6486273
+project-id = 1238317
+
+[[x-prismlauncher-dependencies]]
+addonId = '835091'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = '935166'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = '991341'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = '855414'
+type = 'REQUIRED'

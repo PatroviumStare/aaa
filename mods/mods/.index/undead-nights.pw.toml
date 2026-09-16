@@ -1,0 +1,18 @@
+filename = 'UndeadNights-2.2.5-NeoForge-mc1.21.jar'
+name = 'Undead Nights - Zombie Horde Nights / Hordes'
+side = 'both'
+x-prismlauncher-dependencies = []
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21', '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = '2.2.5-NeoForge-mc1.21'
+
+[download]
+hash = '316246d7bf4017d0b775233ba6aa5dde9202d20f0f8aede2956f6a264ff93a757f4200838799a352eece7cf77c71d28a731434fa7e51415253361746a01ae1bb'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/g0mmcQV2/versions/FgfIMMU7/UndeadNights-2.2.5-NeoForge-mc1.21.jar'
+
+[update.modrinth]
+mod-id = 'g0mmcQV2'
+version = 'FgfIMMU7'

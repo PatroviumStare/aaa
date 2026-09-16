@@ -1,0 +1,25 @@
+filename = 'letsdo-brewery-neoforge-2.1.9.jar'
+name = "[Let's Do] Brewery - Farm&Charm Compat"
+side = ''
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = 'Brewery - 2.1.9 - NEOFORGE - 1.21.1'
+
+[download]
+hash = '3748fdb69cbb5abfc419ec873dc3bf142f0072d0'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 7830639
+project-id = 1038106
+
+[[x-prismlauncher-dependencies]]
+addonId = '419699'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = '1038103'
+type = 'REQUIRED'

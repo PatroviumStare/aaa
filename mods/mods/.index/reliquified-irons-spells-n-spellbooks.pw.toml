@@ -1,0 +1,25 @@
+filename = 'reliquified_irons_spells_and_spellbooks-1.21.1-0.2.7.jar'
+name = "Reliquified Iron's Spells 'n Spellbooks"
+side = 'server'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'beta'
+x-prismlauncher-version-number = 'reliquified_irons_spells_and_spellbooks-1.21.1-0.2.7.jar'
+
+[download]
+hash = 'e22fd94c87cb88b3cfa4637c48a1058260d35a9b'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 8221834
+project-id = 1216851
+
+[[x-prismlauncher-dependencies]]
+addonId = '855414'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = '445274'
+type = 'REQUIRED'

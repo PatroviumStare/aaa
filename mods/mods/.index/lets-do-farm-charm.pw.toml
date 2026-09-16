@@ -1,0 +1,21 @@
+filename = 'letsdo-farm_and_charm-neoforge-1.1.23.jar'
+name = "[Let's Do] Farm & Charm"
+side = 'server'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = 'Farm&Charm - 1.1.23 - NEOFORGE - 1.21.1'
+
+[download]
+hash = '92febd01301604d4f4a9a3c5b1188b1ac8250edc'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 8543130
+project-id = 1038103
+
+[[x-prismlauncher-dependencies]]
+addonId = '419699'
+type = 'REQUIRED'
