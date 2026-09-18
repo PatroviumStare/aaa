@@ -5,8 +5,8 @@ const prevButton = document.querySelector("#prev-btn");
 const nextButton = document.querySelector("#next-btn");
 
 const images = ["image1.jpg", "image2.jpg", "image3.jpg"];
-const mainImage = $("#main-image");
-const imageList = $("#image-list");
+const mainImage = document.querySelector("#main-image");
+const image_list = document.querySelector("#image-list");
 
 const form = document.querySelector("#feedback-form");
 const emailPattern = /.+@.+\..+/i;
