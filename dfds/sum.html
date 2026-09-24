@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Задание 1 — AJAX POST</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    .row { margin-bottom: 8px; }
+    label { display: inline-block; width: 60px; }
+    input { padding: 6px; width: 120px; }
+    #result { margin-top: 12px; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <div class="row">
+    <label>num1</label><input type="text" id="num1" />
+  </div>
+  <div class="row">
+    <label>num2</label><input type="text" id="num2" />
+  </div>
+  <button id="sendBtn">Отправить</button>
+  <div id="result"></div>
+
+  <script>
+    document.getElementById('sendBtn').addEventListener('click', function() {
+      var n1 = document.getElementById('num1').value;
+      var n2 = document.getElementById('num2').value;
+
+      // Формируем параметры как URL-кодированную форму
+      var params = new URLSearchParams();
+      params.append('num1', n1);
+      params.append('num2', n2);
+
+      fetch('a1.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+        },
+        body: params.toString()
+      })
+      .then(function(res) {
+        if (!res.ok) {
+          // Попробуем показать текст ошибки
+          return res.text().then(function(text) {
+            throw new Error(text || 'Ошибка на сервере');
+          });
+        }
+        return res.text();
+      })
+      .then(function(text) {
+        document.getElementById('result').textContent = 'Сумма: ' + text;
+      })
+      .catch(function(err) {
+        document.getElementById('result').textContent = 'Ошибка: ' + err.message;
+      });
+    });
+  </script>
+</body>
+</html>

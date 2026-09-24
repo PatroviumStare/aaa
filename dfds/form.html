@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Задание — AJAX POST форма заявки</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    .row { margin-bottom: 10px; }
+    label { display: inline-block; width: 90px; }
+    input { padding: 6px; width: 260px; }
+    #result { margin-top: 12px; font-weight: bold; }
+  </style>
+</head>
+<body>
+
+  <div class="row">
+    <label>ФИО:</label>
+    <input type="text" id="fio" placeholder="Иванов Иван Иванович" />
+  </div>
+
+  <div class="row">
+    <label>Email:</label>
+    <input type="email" id="email" placeholder="example@mail.ru" />
+  </div>
+
+  <div class="row">
+    <label>Телефон:</label>
+    <input type="text" id="phone" placeholder="+7 999 123-45-67" />
+  </div>
+
+  <button id="sendBtn">Отправить</button>
+
+  <div id="result"></div>
+
+  <script>
+    // Простая валидация email на клиенте
+    function isValidEmail(v) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+    }
+
+    document.getElementById('sendBtn').addEventListener('click', function() {
+      var fio = document.getElementById('fio').value.trim();
+      var email = document.getElementById('email').value.trim();
+      var phone = document.getElementById('phone').value.trim();
+
+      // Клиентская валидация
+      if (!fio) {
+        document.getElementById('result').textContent = 'Ошибка: заполните поле ФИО';
+        return;
+      }
+      if (!email || !isValidEmail(email)) {
+        document.getElementById('result').textContent = 'Ошибка: введите корректный email';
+        return;
+      }
+      if (!phone) {
+        document.getElementById('result').textContent = 'Ошибка: заполните поле телефона';
+        return;
+      }
+
+      var params = new URLSearchParams();
+      params.append('fio', fio);
+      params.append('email', email);
+      params.append('phone', phone);
+
+      fetch('mail.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+        },
+        body: params.toString()
+      })
+      .then(function(res) {
+        if (!res.ok) {
+          return res.text().then(function(text) {
+            throw new Error(text || 'Ошибка на сервере');
+          });
+        }
+        return res.text();
+      })
+      .then(function(text) {
+        document.getElementById('result').textContent = text;
+      })
+      .catch(function(err) {
+        document.getElementById('result').textContent = 'Ошибка: ' + err.message;
+      });
+    });
+  </script>
+</body>
+</html>
